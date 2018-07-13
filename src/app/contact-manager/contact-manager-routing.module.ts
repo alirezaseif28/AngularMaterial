@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
-import { ContactManagerAppComponent } from './contact-manager-app/contact-manager-app.component';
-import { MainContentComponent } from './components/main-content/main-content.component';
+import { MainContentComponent } from "./components/main-content/main-content.component";
+import { ContactManagerAppComponent } from "./contact-manager-app/contact-manager-app.component";
 
 const routes: Routes = [
   {

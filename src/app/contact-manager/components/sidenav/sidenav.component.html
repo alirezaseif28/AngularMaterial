@@ -1,2 +1,19 @@
-<app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
+<mat-sidenav-container fxLayout="row" class="app-sidenav-container" fxFill>
+    <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10" fxFlex="1 1 100%" [opened]="!isScreenSmall" [mode]="isScreenSmall ? 'over' : 'side'">
+        <mat-toolbar color="primary">
+            Contacts
+        </mat-toolbar>
+        <mat-list>
+            <mat-list-item>Item 1</mat-list-item>
+            <mat-list-item>Item 2</mat-list-item>
+            <mat-list-item>Item 3</mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content fxLayout="column" fxFlex="1 1 100%" fxFill>
+        <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+        <div class="wrapper">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
