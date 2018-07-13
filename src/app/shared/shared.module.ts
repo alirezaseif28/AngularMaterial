@@ -3,13 +3,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { ModuleWithProviders, NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { MaterialModule } from "./material.module";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         HttpClientModule,
-        MaterialModule
+        MaterialModule,
+        FlexLayoutModule
     ],
     entryComponents: [
         // All components about to be loaded "dynamically" need to be declared in the entryComponents section.
@@ -22,7 +24,8 @@ import { MaterialModule } from "./material.module";
         CommonModule,
         FormsModule,
         HttpClientModule,
-        MaterialModule
+        MaterialModule,
+        FlexLayoutModule
     ]
     /* No providers here! Since they’ll be already provided in AppModule. */
 })
